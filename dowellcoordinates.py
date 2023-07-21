@@ -23,7 +23,7 @@ def coordinate():
     if info.status_code == 200:
         lat = info.json()['Coords']['lat'][-1]
         lng = info.json()['Coords']['lng'][-1]
-        lab= ttk.Label(bootstyle="inverse-success", text=result.get()+" is in "+dir(lat)+" "+dir(lng)+" direction.", font=('Roboto', 30, 'bold'))
+        lab= ttk.Label(bootstyle="inverse-success", text=result.get()+" is in "+dir(lat)+"-"+dir(lng)+" direction.", font=('Roboto', 30, 'bold'))
     else:
         lab= ttk.Label(bootstyle="inverse-danger", text=info.json(), font=('Roboto', 30, 'bold'))
     lab.pack(side=ttk.TOP, fill=ttk.BOTH)
